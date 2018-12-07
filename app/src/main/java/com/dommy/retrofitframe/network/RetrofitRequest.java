@@ -99,6 +99,7 @@ public class RetrofitRequest {
                     ResponseBody body = response.body();
                     if (body == null) {
                         resultHandler.onServerError();
+                        resultHandler.onAfterFailure();
                         return;
                     }
                     String string = body.string();
@@ -108,6 +109,7 @@ public class RetrofitRequest {
                 } catch (IOException e) {
                     e.printStackTrace();
                     resultHandler.onFailure(e);
+                    resultHandler.onAfterFailure();
                 }
             }
 
@@ -145,6 +147,7 @@ public class RetrofitRequest {
                     ResponseBody body = response.body();
                     if (body == null) {
                         resultHandler.onServerError();
+                        resultHandler.onAfterFailure();
                         return;
                     }
                     String string = body.string();
@@ -154,6 +157,7 @@ public class RetrofitRequest {
                 } catch (IOException e) {
                     e.printStackTrace();
                     resultHandler.onFailure(e);
+                    resultHandler.onAfterFailure();
                 }
             }
 
@@ -194,6 +198,7 @@ public class RetrofitRequest {
                     ResponseBody body = response.body();
                     if (body == null) {
                         resultHandler.onServerError();
+                        resultHandler.onAfterFailure();
                         return;
                     }
                     String string = body.string();
@@ -203,6 +208,7 @@ public class RetrofitRequest {
                 } catch (IOException e) {
                     e.printStackTrace();
                     resultHandler.onFailure(e);
+                    resultHandler.onAfterFailure();
                 }
             }
 
